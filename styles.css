@@ -23,3 +23,61 @@ button:active { opacity: .9; }
 
 /* Video */
 video { max-width: 100%; border-radius: 6px; display: block; }
+/* Home screen styles */
+.home-header {
+  text-align: center;
+  padding: 1rem 0;
+}
+.home-header h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+.tagline {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+.quick-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.quick-btn span {
+  margin-top: 0.4rem;
+  text-align: center;
+}
+.quick-btn.crisis { background: #d9534f; }
+.quick-btn.safe   { background: #5cb85c; }
+.quick-btn.oat    { background: #0275d8; }
+.quick-btn.farm   { background: #f0ad4e; }
+
+.info-panel {
+  background: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.info-panel h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.info-panel p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: #555;
+}
