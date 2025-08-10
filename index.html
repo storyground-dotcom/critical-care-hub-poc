@@ -14,15 +14,32 @@
 
   <main id="app">
     <!-- Home Screen -->
-    <section id="home" class="screen active">
-      <h2>Home</h2>
-      <nav class="card-grid">
-        <button class="card" onclick="navigate('liability')">🚨 Suicide Liability</button>
-        <button class="card" onclick="navigate('culturalCare')">🌿 Culturally Safe Care</button>
-        <button class="card" onclick="navigate('oatCare')">💊 OAT Care</button>
-        <button class="card" onclick="navigate('agricultureCare')">🚜 Agriculture Care</button>
-      </nav>
-    </section>
+ <section id="home" class="screen active">
+  <header class="home-header">
+    <h1>Critical Care Hub</h1>
+    <p class="tagline">Fast, focused support for healthcare workers</p>
+  </header>
+
+  <div class="quick-actions">
+    <button class="quick-btn crisis" onclick="navigate('liability')">
+      🚨 <span>Crisis Tools</span>
+    </button>
+    <button class="quick-btn safe" onclick="navigate('culturalCare')">
+      🌿 <span>Culturally Safe Care</span>
+    </button>
+    <button class="quick-btn oat" onclick="navigate('oatCare')">
+      💊 <span>OAT Care</span>
+    </button>
+    <button class="quick-btn farm" onclick="navigate('agricultureCare')">
+      🚜 <span>Agriculture Care</span>
+    </button>
+  </div>
+
+  <section class="info-panel">
+    <h2>Why Critical Care Hub?</h2>
+    <p>Access evidence-based protocols, legal protection guidance, and culturally safe care resources — all in your pocket, ready when you need them most.</p>
+  </section>
+</section>
 
     <!-- Suicide Liability Module -->
     <section id="liability" class="screen">
