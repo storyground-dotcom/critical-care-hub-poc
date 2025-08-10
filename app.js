@@ -122,3 +122,29 @@ if ("serviceWorker" in navigator) {
     window.location.reload();
   });
 }
+// ---- Responsive scale for Figma home ----
+(function () {
+  const DESIGN_W = 390;  // change to your Figma frame width if different
+  const DESIGN_H = 844;  // change to your Figma frame height if different
+  const container = document.getElementById('figma-home');
+  if (!container) return;
+
+  function resizeFigmaHome() {
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const scale = Math.min(vw / DESIGN_W, vh / DESIGN_H);
+    container.style.transform = `scale(${scale})`;
+
+    // center vertically if there’s extra space
+    const scaledH = DESIGN_H * scale;
+    const topGap = Math.max(0, (vh - scaledH) / 2);
+    container.style.position = 'relative';
+    container.style.top = `${topGap}px`;
+  }
+
+  window.addEventListener('resize', resizeFigmaHome);
+  window.addEventListener('orientationchange', resizeFigmaHome);
+  document.addEventListener('DOMContentLoaded', resizeFigmaHome);
+  // in case DOMContentLoaded has already fired:
+  setTimeout(resizeFigmaHome, 0);
+})();
