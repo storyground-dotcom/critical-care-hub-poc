@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Critical Care Hub - POC</title>
+  <!-- Figma export CSS first (if present), then our app styles -->
   <link rel="stylesheet" href="main.css?v=4" />
   <link rel="stylesheet" href="styles.css?v=4" />
   <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#007BFF" />
 </head>
 <body>
   <header>
@@ -14,32 +16,105 @@
   </header>
 
   <main id="app">
-    <!-- Home Screen -->
+    <!-- Home Screen (Figma layout) -->
     <section id="home" class="screen active">
-      <header class="home-header">
-        <h1>Critical Care Hub</h1>
-        <p class="tagline">Fast, focused support for healthcare workers</p>
-      </header>
+      <div id="figma-home">
+        <div class="v32_615">
+          <div class="v32_616">
+            <div class="v48_20">
+              <span class="v32_617">Critical Care Hub</span>
+              <span class="v32_618">Mental Health Resources</span>
+            </div>
+            <div class="v32_622"></div>
+            <div class="v32_624"></div>
+            <div class="v32_626"></div>
+            <div class="v32_629"></div>
+            <div class="v32_627"></div>
+            <div class="v32_630"></div>
+          </div>
 
-      <div class="quick-actions">
-        <button class="quick-btn crisis" onclick="navigate('liability')">
-          🚨 <span>Crisis Tools</span>
-        </button>
-        <button class="quick-btn safe" onclick="navigate('culturalCare')">
-          🌿 <span>Culturally Safe Care</span>
-        </button>
-        <button class="quick-btn oat" onclick="navigate('oatCare')">
-          💊 <span>OAT Care</span>
-        </button>
-        <button class="quick-btn farm" onclick="navigate('agricultureCare')">
-          🚜 <span>Agriculture Care</span>
-        </button>
+          <!-- Emergency Support CTA -->
+          <div class="v48_75" onclick="navigate('liability')">
+            <span class="v48_72"> Emergency Support</span>
+            <div class="v48_73"></div>
+          </div>
+
+          <!-- Search mock -->
+          <div class="v32_631">
+            <div class="v32_632">
+              <div class="v32_633"></div>
+              <div class="v32_634">
+                <div class="v32_635"></div>
+                <div class="v32_636"></div>
+              </div>
+              <div class="v32_637"></div>
+            </div>
+            <span class="v32_638">Search Protocols, Drugs, Contacts...</span>
+          </div>
+
+          <!-- What's happening now -->
+          <div class="v49_39">
+            <div class="v39_4"><span class="v39_5">I’m unsure about my liability risk?</span></div>
+            <div class="v39_6"><span class="v39_7">Protocol for Opioid Use Disorder?</span></div>
+            <div class="v48_2"><span class="v48_3">Support an agricultural worker in crisis?</span></div>
+            <div class="v39_8"><span class="v39_9">Safe screening for Indigenous patients?</span></div>
+            <span class="v48_15">What's Happening Right Now?</span>
+          </div>
+
+          <!-- Suicide Liability card -->
+          <div class="v48_4" onclick="navigate('liability')">
+            <span class="v48_6">Suicide Liability</span>
+            <span class="v48_7">Legal responsibilities & protections</span>
+            <div class="v48_8"><span class="v48_9">Video</span></div>
+            <div class="v48_10"><span class="v48_11">Checklist</span></div>
+            <div class="v48_12"><span class="v48_13">Documentation</span></div>
+          </div>
+
+          <span class="v48_19">Resource Library</span>
+
+          <!-- Culturally Safe Care -->
+          <div class="v28_514" onclick="navigate('culturalCare')">
+            <span class="v28_517">Culturally Safe Care</span>
+            <span class="v28_518">Culturally safe suicide screening</span>
+            <div class="v28_519"><span class="v28_520">Video</span></div>
+            <div class="v28_521"><span class="v28_522">Screening</span></div>
+            <div class="v28_523"><span class="v28_524">Questions</span></div>
+          </div>
+
+          <!-- OAT -->
+          <div class="v28_503" onclick="navigate('oatCare')">
+            <span class="v28_506">Opioid Agonist Treatment</span>
+            <span class="v28_507">OAT protocols for the ED</span>
+            <div class="v28_508"><span class="v28_509">Video</span></div>
+            <div class="v28_510"><span class="v28_511">Protocol</span></div>
+            <div class="v28_512"><span class="v28_513">Induction</span></div>
+          </div>
+
+          <!-- Agriculture Care -->
+          <div class="v28_574" onclick="navigate('agricultureCare')">
+            <div class="v48_61"><span class="v28_576">Agriculture Care</span></div>
+            <span class="v28_577">Crisis support for agricultural workers</span>
+            <div class="v28_578"><span class="v28_579">Video</span></div>
+            <div class="v28_580"><span class="v28_581">Checklist</span></div>
+            <div class="v28_582"><span class="v28_583">Crisis Line</span></div>
+            <div class="name"></div>
+          </div>
+
+          <!-- Bottom nav -->
+          <div class="v48_58">
+            <div class="v48_37">
+              <div class="v48_33" onclick="navigate('home')"><span class="v48_22">🏠</span><span class="v48_23">Home</span></div>
+              <div class="v48_34"><span class="v48_24">📋</span><span class="v48_25">Recent</span></div>
+              <div class="v48_35"><span class="v48_26">⭐</span><span class="v48_27">Favorites</span></div>
+              <div class="v48_36"><span class="v48_28">🔍</span><span class="v48_29">Search</span></div>
+            </div>
+            <div class="v48_31"></div>
+          </div>
+
+          <div class="v49_37"></div>
+          <div class="v49_40"></div>
+        </div>
       </div>
-
-      <section class="info-panel">
-        <h2>Why Critical Care Hub?</h2>
-        <p>Access evidence-based protocols, legal protection guidance, and culturally safe care resources — all in your pocket, ready when you need them most.</p>
-      </section>
     </section>
 
     <!-- Suicide Liability Module -->
