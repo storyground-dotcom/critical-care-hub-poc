@@ -81,3 +81,14 @@ video { max-width: 100%; border-radius: 6px; display: block; }
   font-size: 0.9rem;
   color: #555;
 }
+/* Responsive scaler for the Figma home frame */
+#figma-home {
+  position: relative;
+  width: 390px;   /* your design width (adjust if your Figma frame differs) */
+  height: 844px;  /* your design height */
+  transform-origin: top left;
+  margin: 0 auto; /* center horizontally */
+}
+
+/* Make the page background stable while scaling */
+body { background: #f4f4f4; }
