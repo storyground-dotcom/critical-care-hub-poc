@@ -1,8 +1,8 @@
-const CACHE_NAME = "carehub-cache-v4"; // bump this each visual change
+const CACHE_NAME = "carehub-cache-v5"; // bump this each visual change
 const urlsToCache = [
-  "/",
+  "/",            // root
   "/index.html",
-  "/styles.css",
+  "/styles.css",  // we’ll match even if requested as styles.css?v=5
   "/main.css",
   "/app.js",
   "/manifest.json"
@@ -16,10 +16,10 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// Network falling back to cache
+// Network falling back to cache (ignore query strings like ?v=5)
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((resp) => resp || fetch(event.request))
+    caches.match(event.request, { ignoreSearch: true }).then((resp) => resp || fetch(event.request))
   );
 });
 
