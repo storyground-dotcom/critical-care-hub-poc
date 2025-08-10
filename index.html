@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Critical Care Hub - POC</title>
-  <!-- Figma export CSS first (if present), then our app styles -->
   <link rel="stylesheet" href="main.css?v=4" />
   <link rel="stylesheet" href="styles.css?v=4" />
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#007BFF" />
 </head>
 <body>
   <header>
@@ -49,7 +47,6 @@
       <button class="back-btn" onclick="navigate('home')">← Back</button>
       <h2>Suicide Liability</h2>
 
-      <!-- Story -->
       <div class="module-block">
         <h3>Story</h3>
         <video autoplay muted loop playsinline width="100%">
@@ -58,20 +55,17 @@
         </video>
       </div>
 
-      <!-- Learn -->
       <div class="module-block">
         <h3>Learn</h3>
         <p>Four-question crisis assessment tool for suicide liability.</p>
         <button onclick="startAssessment()">Start Assessment</button>
       </div>
 
-      <!-- Do -->
       <div class="module-block">
         <h3>Do</h3>
         <button onclick="copyToClipboard('Example EMR note')">Copy EMR Example</button>
       </div>
 
-      <!-- Commit -->
       <div class="module-block">
         <h3>Commit</h3>
         <button onclick="makePledge('Suicide Liability Best Practices')">I Commit</button>
@@ -106,6 +100,6 @@
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>
