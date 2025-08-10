@@ -23,13 +23,13 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
-// Activate + clear old caches
+// Activate + clear old caches and take control
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     (async () => {
       const keys = await caches.keys();
       await Promise.all(keys.map((k) => (k !== CACHE_NAME ? caches.delete(k) : null)));
-      await self.clients.claim(); // control all pages without reload
+      await self.clients.claim();
     })()
   );
 });
