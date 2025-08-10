@@ -111,3 +111,14 @@ if ("serviceWorker" in navigator) {
       .then(() => console.log("Service Worker registered"));
   });
 }
+// Force-check for a newer service worker on each load
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.getRegistration().then(reg => {
+    if (reg) reg.update();
+  });
+
+  // If the new SW takes control, reload once to show fresh UI
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    window.location.reload();
+  });
+}
