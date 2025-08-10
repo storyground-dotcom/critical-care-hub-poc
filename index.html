@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Critical Care Hub - POC</title>
+  <!-- Figma export CSS first (if present), then our app styles -->
   <link rel="stylesheet" href="main.css" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles.css" />
   <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#007BFF" />
 </head>
 <body>
   <header>
@@ -16,32 +17,32 @@
 
   <main id="app">
     <!-- Home Screen -->
- <section id="home" class="screen active">
-  <header class="home-header">
-    <h1>Critical Care Hub</h1>
-    <p class="tagline">Fast, focused support for healthcare workers</p>
-  </header>
+    <section id="home" class="screen active">
+      <header class="home-header">
+        <h1>Critical Care Hub</h1>
+        <p class="tagline">Fast, focused support for healthcare workers</p>
+      </header>
 
-  <div class="quick-actions">
-    <button class="quick-btn crisis" onclick="navigate('liability')">
-      🚨 <span>Crisis Tools</span>
-    </button>
-    <button class="quick-btn safe" onclick="navigate('culturalCare')">
-      🌿 <span>Culturally Safe Care</span>
-    </button>
-    <button class="quick-btn oat" onclick="navigate('oatCare')">
-      💊 <span>OAT Care</span>
-    </button>
-    <button class="quick-btn farm" onclick="navigate('agricultureCare')">
-      🚜 <span>Agriculture Care</span>
-    </button>
-  </div>
+      <div class="quick-actions">
+        <button class="quick-btn crisis" onclick="navigate('liability')">
+          🚨 <span>Crisis Tools</span>
+        </button>
+        <button class="quick-btn safe" onclick="navigate('culturalCare')">
+          🌿 <span>Culturally Safe Care</span>
+        </button>
+        <button class="quick-btn oat" onclick="navigate('oatCare')">
+          💊 <span>OAT Care</span>
+        </button>
+        <button class="quick-btn farm" onclick="navigate('agricultureCare')">
+          🚜 <span>Agriculture Care</span>
+        </button>
+      </div>
 
-  <section class="info-panel">
-    <h2>Why Critical Care Hub?</h2>
-    <p>Access evidence-based protocols, legal protection guidance, and culturally safe care resources — all in your pocket, ready when you need them most.</p>
-  </section>
-</section>
+      <section class="info-panel">
+        <h2>Why Critical Care Hub?</h2>
+        <p>Access evidence-based protocols, legal protection guidance, and culturally safe care resources — all in your pocket, ready when you need them most.</p>
+      </section>
+    </section>
 
     <!-- Suicide Liability Module -->
     <section id="liability" class="screen">
