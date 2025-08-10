@@ -1,0 +1,16 @@
+# Deploy Critical Care Hub POC to Vercel
+
+## 1) Sign in
+Go to https://vercel.com and sign in (GitHub/GitLab/email).
+
+## 2) Upload the folder
+Zip the `critical-care-hub-poc` folder.
+Click **New Project → Import → From your computer** and upload the zip.
+
+## 3) Deploy
+Use default settings → **Deploy**.
+You’ll get a live link in ~20 seconds.
+
+## Optional: Install as an app (PWA)
+Open the link on your phone → “Add to Home Screen”.
+Works offline for cached pages.

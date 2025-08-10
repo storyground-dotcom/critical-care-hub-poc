@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Critical Care Hub - POC</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <header>
+    <h1>Critical Care Hub</h1>
+  </header>
+
+  <main id="app">
+    <!-- Home Screen -->
+    <section id="home" class="screen active">
+      <h2>Home</h2>
+      <nav class="card-grid">
+        <button class="card" onclick="navigate('liability')">🚨 Suicide Liability</button>
+        <button class="card" onclick="navigate('culturalCare')">🌿 Culturally Safe Care</button>
+        <button class="card" onclick="navigate('oatCare')">💊 OAT Care</button>
+        <button class="card" onclick="navigate('agricultureCare')">🚜 Agriculture Care</button>
+      </nav>
+    </section>
+
+    <!-- Suicide Liability Module -->
+    <section id="liability" class="screen">
+      <button class="back-btn" onclick="navigate('home')">← Back</button>
+      <h2>Suicide Liability</h2>
+
+      <!-- Story -->
+      <div class="module-block">
+        <h3>Story</h3>
+        <video autoplay muted loop playsinline width="100%">
+          <source src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Learn -->
+      <div class="module-block">
+        <h3>Learn</h3>
+        <p>Four-question crisis assessment tool for suicide liability.</p>
+        <button onclick="startAssessment()">Start Assessment</button>
+      </div>
+
+      <!-- Do -->
+      <div class="module-block">
+        <h3>Do</h3>
+        <button onclick="copyToClipboard('Example EMR note')">Copy EMR Example</button>
+      </div>
+
+      <!-- Commit -->
+      <div class="module-block">
+        <h3>Commit</h3>
+        <button onclick="makePledge('Suicide Liability Best Practices')">I Commit</button>
+      </div>
+    </section>
+
+    <!-- Culturally Safe Care Module -->
+    <section id="culturalCare" class="screen">
+      <button class="back-btn" onclick="navigate('home')">← Back</button>
+      <h2>Culturally Safe Care</h2>
+      <div class="module-block">
+        <p>Placeholder: This module will include culturally safe suicide screening guidance for Indigenous patients, with videos, interactive tools, and references.</p>
+      </div>
+    </section>
+
+    <!-- OAT Care Module -->
+    <section id="oatCare" class="screen">
+      <button class="back-btn" onclick="navigate('home')">← Back</button>
+      <h2>OAT Care</h2>
+      <div class="module-block">
+        <p>Placeholder: This module will focus on Opioid Agonist Treatment protocols for emergency departments, including patient assessment guides and medication options.</p>
+      </div>
+    </section>
+
+    <!-- Agriculture Care Module -->
+    <section id="agricultureCare" class="screen">
+      <button class="back-btn" onclick="navigate('home')">← Back</button>
+      <h2>Agriculture Care</h2>
+      <div class="module-block">
+        <p>Placeholder: This module will provide crisis support resources for agricultural workers, linking to AgLife and other local mental wellness programs.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
